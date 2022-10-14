@@ -1,5 +1,6 @@
 package assignment1package;
 
+import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -10,9 +11,11 @@ class studentTest {
 
     @Test
     void getUsername() {
-        student exampleStudent;
-        exampleStudent = new student("John", 21, LocalDate.of(2000, 12, 31), 111111111, "BCT", new String[]{"CT100", "CT200"});
+        course_program course = new course_program("Computer Science & IT", new DateTime(2020, 8, 1, 8, 0), new DateTime(2020, 8, 1, 8, 0));
+        student exampleStudent[]={new student("John", 21, LocalDate.of(2000, 12, 31), 111111111, course, new module[]{})};
 
-        assertEquals(exampleStudent.getName() + exampleStudent.getAge(),exampleStudent.getUsername());
+        course.setEnrolled_students(exampleStudent);
+
+        assertEquals(exampleStudent[0].getName() + exampleStudent[0].getAge(), exampleStudent[0].getUsername());
     }
 }

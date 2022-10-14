@@ -8,12 +8,12 @@ public class student {
     private LocalDate DOB;
     private long ID;
     private String username;
-    private String courses;
-    private String[] modules;
+    private course_program courses;
+    private module[] modules;
 
     // Constructor
 
-    public student(String name, int age, LocalDate DOB, long ID, String courses, String[] modules) {
+    public student(String name, int age, LocalDate DOB, long ID, course_program courses, module[] modules) {
         Name = name;
         Age = age;
         this.DOB = DOB;
@@ -68,19 +68,19 @@ public class student {
         this.username = username;
     }
 
-    public String getCourses() {
+    public course_program getCourses() {
         return courses;
     }
 
-    public void setCourses(String courses) {
+    public void setCourses(course_program courses) {
         this.courses = courses;
     }
 
-    public String[] getModules() {
+    public module[] getModules() {
         return modules;
     }
 
-    public void setModules(String[] modules) {
+    public void setModules(module[] modules) {
         this.modules = modules;
     }
 }

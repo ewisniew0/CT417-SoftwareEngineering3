@@ -11,10 +11,8 @@ public class course_program {
 
     // Constructor
 
-    public course_program(String course_name, module[] module_list, student[] enrolled_students, DateTime academic_start_date, DateTime academic_end_date) {
+    public course_program(String course_name, DateTime academic_start_date, DateTime academic_end_date) {
         this.course_name = course_name;
-        this.module_list = module_list;
-        this.enrolled_students = enrolled_students;
         this.academic_start_date = academic_start_date;
         this.academic_end_date = academic_end_date;
     }

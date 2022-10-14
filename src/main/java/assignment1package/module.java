@@ -1,27 +1,25 @@
 package assignment1package;
 
-import java.time.LocalDate;
+
+import org.joda.time.DateTime;
 
 public class module {
 
     private String module_name;
     private long id;
     private student[] enrolled_students;
-    private LocalDate start_date;
-    private LocalDate end_date;
+    private DateTime start_date;
+    private DateTime end_date;
     private String[] associated_courses;
     private lecturer lecturer_responsible;
 
     // Constructor
 
-    public module(String module_name, long id, student[] enrolled_students, LocalDate start_date, LocalDate end_date, String[] associated_courses, lecturer lecturer_responsible) {
+    public module(String module_name, long id, DateTime start_date, DateTime end_date) {
         this.module_name = module_name;
         this.id = id;
-        this.enrolled_students = enrolled_students;
         this.start_date = start_date;
         this.end_date = end_date;
-        this.associated_courses = associated_courses;
-        this.lecturer_responsible = lecturer_responsible;
     }
 
 
@@ -51,19 +49,19 @@ public class module {
         this.enrolled_students = enrolled_students;
     }
 
-    public LocalDate getStart_date() {
+    public DateTime getStart_date() {
         return start_date;
     }
 
-    public void setStart_date(LocalDate start_date) {
+    public void setStart_date(DateTime start_date) {
         this.start_date = start_date;
     }
 
-    public LocalDate getEnd_date() {
+    public DateTime getEnd_date() {
         return end_date;
     }
 
-    public void setEnd_date(LocalDate end_date) {
+    public void setEnd_date(DateTime end_date) {
         this.end_date = end_date;
     }
 

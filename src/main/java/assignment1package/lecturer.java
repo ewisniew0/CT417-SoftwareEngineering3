@@ -8,7 +8,7 @@ public class lecturer {
     private LocalDate DOB;
     private long ID;
     private String username;
-    private String[] modules_teaching;
+    private module[] modules_teaching;
 
     public String getUsername() {
         username = Name + Age;
@@ -18,7 +18,7 @@ public class lecturer {
 
     // Constructor
 
-    public lecturer(String name, int age, LocalDate DOB, long ID, String[] modules_teaching) {
+    public lecturer(String name, int age, LocalDate DOB, long ID, module[] modules_teaching) {
         Name = name;
         Age = age;
         this.DOB = DOB;
@@ -65,11 +65,11 @@ public class lecturer {
         this.username = username;
     }
 
-    public String[] getModules_teaching() {
+    public module[] getModules_teaching() {
         return modules_teaching;
     }
 
-    public void setModules_teaching(String[] modules_teaching) {
+    public void setModules_teaching(module[] modules_teaching) {
         this.modules_teaching = modules_teaching;
     }
 }
