@@ -2,6 +2,8 @@ package assignment1package;
 
 import org.joda.time.DateTime;
 
+import java.util.Arrays;
+
 public class course_program {
     private String course_name;
     private module[] module_list;
@@ -57,5 +59,16 @@ public class course_program {
 
     public void setAcademic_end_date(DateTime academic_end_date) {
         this.academic_end_date = academic_end_date;
+    }
+
+    @Override
+    public String toString() {
+        return "course_program{" +
+                "course_name='" + course_name + '\'' +
+                ", module_list=" + Arrays.toString(module_list) +
+                ", enrolled_students=" + Arrays.toString(enrolled_students) +
+                ", academic_start_date=" + academic_start_date +
+                ", academic_end_date=" + academic_end_date +
+                '}';
     }
 }

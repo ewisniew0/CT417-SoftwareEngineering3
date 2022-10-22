@@ -1,6 +1,7 @@
 package assignment1package;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class student {
     private String Name;
@@ -82,5 +83,18 @@ public class student {
 
     public void setModules(module[] modules) {
         this.modules = modules;
+    }
+
+    @Override
+    public String toString() {
+        return "student{" +
+                "Name='" + Name + '\'' +
+                ", Age=" + Age +
+                ", DOB=" + DOB +
+                ", ID=" + ID +
+                ", username='" + username + '\'' +
+                ", courses=" + courses +
+                ", modules=" + Arrays.toString(modules) +
+                '}';
     }
 }

@@ -3,6 +3,8 @@ package assignment1package;
 
 import org.joda.time.DateTime;
 
+import java.util.Arrays;
+
 public class module {
 
     private String module_name;
@@ -79,5 +81,18 @@ public class module {
 
     public void setLecturer_responsible(lecturer lecturer_responsible) {
         this.lecturer_responsible = lecturer_responsible;
+    }
+
+    @Override
+    public String toString() {
+        return "module{" +
+                "module_name='" + module_name + '\'' +
+                ", id=" + id +
+                ", enrolled_students=" + Arrays.toString(enrolled_students) +
+                ", start_date=" + start_date +
+                ", end_date=" + end_date +
+                ", associated_courses=" + Arrays.toString(associated_courses) +
+                ", lecturer_responsible=" + lecturer_responsible +
+                '}';
     }
 }
